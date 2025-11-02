@@ -1,5 +1,9 @@
 ### ⚠️ Warning: This document is under constant modifications
 
+# Metadata
+
+- **Genre's:** Souls-Like; Metroidvania.
+
 # Core loop
 
 - **Observation Phase:** Use your vision to assess the room - creature positions, patrol routes, environmental objects
@@ -8,9 +12,9 @@
 
 - **Tactical Engagement:** Choose when to fight, when to avoid, when to manipulate
 
-# Key Mechanics:
+# Key Mechanics
 
-## Sound Management System:
+## Sound Management System
 
 - **Walking** - Minimal sound, safe for most situations
 
@@ -22,7 +26,7 @@
 
 - **Interacting** - Opening doors, chests creates localized sound
 
-## Environmental Interactions:
+## Environmental Interactions
 
 - **Throwable objects** - Create distraction sounds at target location
 
@@ -30,7 +34,7 @@
 
 - **Breakable objects** - Can create loud noises that alert entire area
 
-## Creature AI Behaviors:
+## Creature AI Behaviors
 
 - States: Sleeping → Alert (head tilting) → Investigating (move to sound) → Aggressive
 
@@ -40,7 +44,7 @@
 
 - Different creatures have different hearing sensitivity
 
-# Player Arsenal:
+# Player Arsenal
 
 - **Starting dagger** - Quiet but short range
 
