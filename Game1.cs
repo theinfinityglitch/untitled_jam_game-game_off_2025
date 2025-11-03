@@ -1,8 +1,8 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace untitled_jam_game_game_off_2025;
+namespace UntitleJamGame;
 
 public class Game1 : Game
 {

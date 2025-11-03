@@ -1,2 +1,11 @@
-﻿using var game = new untitled_jam_game_game_off_2025.Game1();
-game.Run();
+namespace UntitleJamGame
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            using var game = new UntitleJamGame.Game1();
+            game.Run();
+        }
+    }
+}
