@@ -1,10 +1,10 @@
-namespace UntitleJamGame
+namespace UntitledJamGame
 {
     class Program
     {
         static void Main(string[] args)
         {
-            using var game = new UntitleJamGame.Game1();
+            using var game = new UntitledJamGame.Game1();
             game.Run();
         }
     }
