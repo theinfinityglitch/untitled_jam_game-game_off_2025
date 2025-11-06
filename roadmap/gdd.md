@@ -2,7 +2,7 @@
 
 # Metadata
 
-- **Genre's:** Souls-Like; Metroidvania.
+- **Game Genre:** Souls-Like; Metroidvania.
 
 # Core loop
 
@@ -62,6 +62,6 @@
 
 - **Engine/Framework:** [MonoGame](https://github.com/MonoGame/MonoGame)
 
-- **Third party libraries:** [Friflo.Engine.ECS](https://github.com/friflo/Friflo.Engine.ECS)
+- **Third party libraries:** [Friflo.Engine.ECS](https://github.com/friflo/Friflo.Engine.ECS), [Box2D.NET](https://github.com/ikpil/Box2D.NET)
 
 - **Pixel art tool:** [Pixelorama](https://github.com/Orama-Interactive/Pixelorama)
