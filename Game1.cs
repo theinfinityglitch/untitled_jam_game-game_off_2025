@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using ldtk;
 using System;
+using System.IO;
 
 namespace UntitledJamGame;
 
@@ -29,8 +30,7 @@ public class Game1 : Game
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
-        level = LdtkJson.FromJson("Content/test_ldtk.json");
-        Console.WriteLine(level);
+        level = LdtkJson.FromJson(File.ReadAllText("Content/test_ldtk.json"));
 
         // TODO: use this.Content to load your game content here
     }
