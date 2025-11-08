@@ -1,7 +1,7 @@
 ### ⚠️ Warning: This document is under constant modifications
 
 # Pre-production (day 5 to 15 of Novemeber)
-- [ ] Render tilemaps from LDTK
+- [x] Render tilemaps from LDTK
 - [ ] Integrate Rapier
 - [ ] Generate collisions for tilemaps using Rapier
 - [ ] Implement a extensible multi layer Spatial Grids (World, entities and sound layers and beyond)

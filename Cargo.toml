@@ -34,7 +34,6 @@ bevy = { version = "0.17.2", default-features = false, features = [
   "bevy_winit",
   "custom_cursor",
   "debug",
-  "dynamic_linking",
   "file_watcher",
   "hdr",
   "ktx2",
@@ -51,9 +50,11 @@ bevy = { version = "0.17.2", default-features = false, features = [
   "x11",
   "zstd_rust"
 ] }
+bevy_ecs_ldtk = "0.13.0"
 log = { version = "*", features = ["max_level_debug", "release_max_level_warn"] }
 
 [features]
+default = ["dynamic"]
 dynamic = ["bevy/dynamic_linking"]
 
 # Enable a small amount of optimization in the dev profile.
