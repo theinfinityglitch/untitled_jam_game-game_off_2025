@@ -1,5 +1,6 @@
-use bevy::{prelude::*, window::WindowResolution};
+use bevy::{diagnostic::FrameTimeDiagnosticsPlugin, prelude::*, window::WindowResolution};
 use bevy_ecs_ldtk::prelude::*;
+use bevy_inspector_egui::{bevy_egui::EguiPlugin, quick::WorldInspectorPlugin};
 use bevy_rapier2d::prelude::*;
 
 fn main() {
@@ -17,11 +18,13 @@ fn main() {
                 })
                 .set(ImagePlugin::default_nearest()),
         )
+        .add_plugins(FrameTimeDiagnosticsPlugin::default())
+        .add_plugins(LdtkPlugin)
         .add_plugins((
-            LdtkPlugin,
             RapierPhysicsPlugin::<NoUserData>::pixels_per_meter(100.0),
+            RapierDebugRenderPlugin::default(),
         ))
-        .add_plugins(RapierDebugRenderPlugin::default())
+        .add_plugins((EguiPlugin::default(), WorldInspectorPlugin::new()))
         .add_systems(Startup, setup)
         .insert_resource(LevelSelection::index(0))
         .run();

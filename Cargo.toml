@@ -50,6 +50,13 @@ bevy = { version = "0.17.2", default-features = false, features = [
   "zstd_rust"
 ] }
 bevy_ecs_ldtk = { git = "https://github.com/Trouv/bevy_ecs_ldtk.git", rev = "f83c396" }
+bevy-inspector-egui = { git = "https://github.com/theinfinityglitch/bevy-inspector-egui.git", branch = "test-0.17.2", default-features = false, features = [
+  "bevy_core_pipeline",
+  "bevy_image",
+  "bevy_render",
+  "documentation",
+  "egui_clipboard",
+] }
 bevy_rapier2d = { git = "https://github.com/Deniskore/bevy_rapier.git", branch = "bevy-0.17", features = [
   "debug-render-2d"
 ] }
