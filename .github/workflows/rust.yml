@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y mold clang wayland
+          sudo apt-get install -y mold clang libwayland libwayland-dev
       - name: Build
         run: cargo build --verbose
       - name: Run tests
