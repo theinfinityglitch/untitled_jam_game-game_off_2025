@@ -1,4 +1,4 @@
-# Untitle Jam Game (name to be decided)
+# Untitled Jam Game (name to be decided)
 
 This is my entry for the Game Off 2025 jam by GitHub. For now I am solo.
 

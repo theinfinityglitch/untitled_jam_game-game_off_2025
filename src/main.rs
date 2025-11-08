@@ -1,5 +1,6 @@
 use bevy::{prelude::*, window::WindowResolution};
 use bevy_ecs_ldtk::prelude::*;
+use bevy_rapier2d::prelude::*;
 
 fn main() {
     App::new()
@@ -16,7 +17,11 @@ fn main() {
                 })
                 .set(ImagePlugin::default_nearest()),
         )
-        .add_plugins(LdtkPlugin)
+        .add_plugins((
+            LdtkPlugin,
+            RapierPhysicsPlugin::<NoUserData>::pixels_per_meter(100.0),
+        ))
+        .add_plugins(RapierDebugRenderPlugin::default())
         .add_systems(Startup, setup)
         .insert_resource(LevelSelection::index(0))
         .run();
