@@ -1,0 +1,62 @@
+[package]
+name = "untitled_jam_game-game_off_2025"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { version = "0.17.2", default-features=false, features = [
+	"dynamic_linking",
+	"animation",
+	"async_executor",
+	"bevy_animation",
+	"bevy_anti_alias",
+	"bevy_asset",
+	"bevy_audio",
+	"bevy_camera",
+	"bevy_color",
+	"bevy_core_pipeline",
+	"bevy_gilrs",
+	"bevy_gizmos",
+	"bevy_image",
+	"bevy_input_focus",
+	"bevy_log",
+	"bevy_mesh",
+	"bevy_post_process",
+	"bevy_render",
+	"bevy_scene",
+	"bevy_shader",
+	"bevy_sprite",
+	"bevy_state",
+	"bevy_text",
+	"bevy_ui",
+	"bevy_ui_render",
+	"bevy_window",
+	"bevy_winit",
+	"custom_cursor",
+	"debug",
+	"default_font",
+	"hdr",
+	"ktx2",
+	"multi_threaded",
+	"png",
+	"reflect_auto_register",
+	"smaa_luts",
+	"std",
+	"sysinfo_plugin",
+	"tonemapping_luts",
+	"vorbis",
+	"wayland",
+	"webgl2",
+	"x11",
+	"zstd_rust",
+	"file_watcher"
+] }
+log = { version = "*", features = ["max_level_debug", "release_max_level_warn"] }
+
+# Enable a small amount of optimization in the dev profile.
+[profile.dev]
+opt-level = 1
+
+# Enable a large amount of optimization in the dev profile for dependencies.
+[profile.dev.package."*"]
+opt-level = 3

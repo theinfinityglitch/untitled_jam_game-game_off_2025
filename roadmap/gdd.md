@@ -58,10 +58,12 @@
 
 ## Pipeline
 
-- **Primary programming language:** C#
+- **Primary programming language:** Rust
 
-- **Engine/Framework:** [MonoGame](https://github.com/MonoGame/MonoGame)
+- **Engine/Framework:** [Bevy](https://github.com/bevyengine/bevy)
 
-- **Third party libraries:** [Friflo.Engine.ECS](https://github.com/friflo/Friflo.Engine.ECS), [Box2D.NET](https://github.com/ikpil/Box2D.NET)
+- **Third party crates:** [bevy_rapier_2d](https://github.com/dimforge/bevy_rapier), [bevy_ecs_ldtk](https://github.com/Trouv/bevy_ecs_ldtk), [bevy_egui](https://github.com/vladbat00/bevy_egui)
 
 - **Pixel art tool:** [Pixelorama](https://github.com/Orama-Interactive/Pixelorama)
+
+- **Level editor:** [LDtk](https://github.com/deepnight/ldtk)
