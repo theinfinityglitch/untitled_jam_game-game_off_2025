@@ -39,7 +39,6 @@ bevy = { version = "0.17.2", default-features = false, features = [
   "multi_threaded",
   "png",
   "reflect_auto_register",
-  "smaa_luts",
   "std",
   "sysinfo_plugin",
   "tonemapping_luts",
@@ -49,7 +48,7 @@ bevy = { version = "0.17.2", default-features = false, features = [
   "x11",
   "zstd_rust"
 ] }
-bevy_ecs_ldtk = { git = "https://github.com/Trouv/bevy_ecs_ldtk.git", rev = "f83c396" }
+bevy_ecs_ldtk = "0.13.0"
 bevy-inspector-egui = { git = "https://github.com/theinfinityglitch/bevy-inspector-egui.git", branch = "test-0.17.2", default-features = false, features = [
   "bevy_core_pipeline",
   "bevy_image",

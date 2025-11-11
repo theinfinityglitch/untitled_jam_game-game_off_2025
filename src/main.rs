@@ -1,3 +1,6 @@
+mod game_flow;
+mod player;
+
 use bevy::{diagnostic::FrameTimeDiagnosticsPlugin, prelude::*, window::WindowResolution};
 use bevy_ecs_ldtk::prelude::*;
 use bevy_inspector_egui::{bevy_egui::EguiPlugin, quick::WorldInspectorPlugin};
@@ -10,7 +13,7 @@ fn main() {
                 .set(WindowPlugin {
                     primary_window: Some(Window {
                         resolution: WindowResolution::new(960, 540),
-                        title: String::from("Untitled Jam Game"),
+                        title: String::from("Jam Game"),
                         resizable: false,
                         ..default()
                     }),
@@ -25,23 +28,7 @@ fn main() {
             RapierDebugRenderPlugin::default(),
         ))
         .add_plugins((EguiPlugin::default(), WorldInspectorPlugin::new()))
-        .add_systems(Startup, setup)
+        .add_plugins(game_flow::GameFlowPlugin)
         .insert_resource(LevelSelection::index(0))
         .run();
-}
-
-fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
-    commands.spawn((
-        Camera2d,
-        Projection::Orthographic(OrthographicProjection {
-            scale: 0.5,
-            ..OrthographicProjection::default_2d()
-        }),
-        Transform::from_xyz(960.0 / 4.0, 540.0 / 4.0, 0.0),
-    ));
-
-    commands.spawn(LdtkWorldBundle {
-        ldtk_handle: asset_server.load("test_ldtk.ldtk").into(),
-        ..Default::default()
-    });
 }

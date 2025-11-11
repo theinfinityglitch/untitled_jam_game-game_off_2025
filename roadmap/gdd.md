@@ -62,7 +62,7 @@
 
 - **Engine/Framework:** [Bevy](https://github.com/bevyengine/bevy)
 
-- **Third party crates:** [bevy_rapier_2d](https://github.com/dimforge/bevy_rapier), [bevy_ecs_ldtk](https://github.com/Trouv/bevy_ecs_ldtk), [bevy_egui](https://github.com/vladbat00/bevy_egui)
+- **Third party crates:** [bevy_rapier_2d](https://github.com/dimforge/bevy_rapier), [bevy_ecs_ldtk](https://github.com/Trouv/bevy_ecs_ldtk), [bevy_egui](https://github.com/vladbat00/bevy_egui), [bevy_inspector_egui](https://github.com/jakobhellermann/bevy-inspector-egui)
 
 - **Pixel art tool:** [Pixelorama](https://github.com/Orama-Interactive/Pixelorama)
 
