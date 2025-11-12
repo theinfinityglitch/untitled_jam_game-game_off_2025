@@ -1,5 +1,7 @@
+mod constants;
 mod game_flow;
 mod player;
+mod tiles;
 
 use bevy::{diagnostic::FrameTimeDiagnosticsPlugin, prelude::*, window::WindowResolution};
 use bevy_ecs_ldtk::prelude::*;
@@ -28,7 +30,8 @@ fn main() {
             RapierDebugRenderPlugin::default(),
         ))
         .add_plugins((EguiPlugin::default(), WorldInspectorPlugin::new()))
-        .add_plugins(game_flow::GameFlowPlugin)
+        .add_plugins(tiles::TileColliderPlugin)
         .insert_resource(LevelSelection::index(0))
+        .add_plugins(game_flow::GameFlowPlugin)
         .run();
 }
