@@ -14,5 +14,5 @@ pub const HIGH_RES_LAYERS: RenderLayers = RenderLayers::layer(1);
 
 // Player related constants.
 pub const PLAYER_VELOCITY_X: f32 = 200.0;
-pub const PLAYER_VELOCITY_Y: f32 = 850.0;
-pub const MAX_JUMP_HEIGHT: f32 = 230.0;
+pub const PLAYER_JUMP_VELOCITY: f32 = 450.0;
+pub const MAX_JUMP_HEIGHT: f32 = 115.0;

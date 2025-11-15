@@ -107,15 +107,12 @@ fn setup(
     mut meshes: ResMut<Assets<Mesh>>,
     mut materials: ResMut<Assets<ColorMaterial>>,
 ) -> Result<(), BevyError> {
-    // Spawn a blue square for representating a test player
     commands.spawn((
         Mesh2d(meshes.add(Rectangle::new(16.0f32, 16.0f32))),
-        MeshMaterial2d(materials.add(Color::linear_rgb(0.0f32, 0.0f32, 1.0f32))),
-        RigidBody::KinematicPositionBased,
+        MeshMaterial2d(materials.add(Color::linear_rgb(1.0f32, 0.0f32, 0.0f32))),
+        RigidBody::Dynamic,
         Collider::cuboid(16.0f32 / 2.0f32, 16.0f32 / 2.0f32),
-        KinematicCharacterController::default(),
         Transform::from_xyz(640.0f32 / 2.0f32, 320.0f32, 3.0f32),
-        player::Player,
         constants::PIXEL_PERFECT_LAYERS,
     ));
 
@@ -137,10 +134,6 @@ pub struct GameFlowPlugin;
 impl Plugin for GameFlowPlugin {
     fn build(&self, app: &mut App) {
         app.add_systems(Startup, (setup_camera, setup))
-            .add_systems(Update, fit_canvas)
-            .add_systems(Update, player::player_system)
-            .add_systems(Update, player::jump)
-            .add_systems(Update, player::rise)
-            .add_systems(Update, player::fall);
+            .add_systems(Update, fit_canvas);
     }
 }

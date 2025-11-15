@@ -34,5 +34,6 @@ fn main() {
         .add_plugins(tiles::TileColliderPlugin)
         .insert_resource(LevelSelection::index(0))
         .add_plugins(game_flow::GameFlowPlugin)
+        .add_plugins(player::PlayerPlugin)
         .run();
 }

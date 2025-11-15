@@ -1,6 +1,6 @@
 ### ⚠️ Warning: This document is under constant modifications
 
-# Pre-production (day 5 to 15 of Novemeber)
+# Pre-production (day 5 to 19 of Novemeber)
 - [x] Render tilemaps from LDTK
 - [x] Integrate Rapier
 - [x] Generate collisions for tilemaps using Rapier
