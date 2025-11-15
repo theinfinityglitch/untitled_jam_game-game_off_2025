@@ -6,7 +6,7 @@ use bevy::{
     render::render_resource::{
         Extent3d, TextureDescriptor, TextureDimension, TextureFormat, TextureUsages,
     },
-    window::{PrimaryWindow, WindowMode, WindowResized},
+    window::WindowResized,
 };
 use bevy_ecs_ldtk::prelude::*;
 use bevy_rapier2d::prelude::*;
@@ -100,15 +100,6 @@ fn fit_canvas(
     }
 }
 
-fn set_fullscreen(
-    mut primary_window: Query<&mut Window, With<PrimaryWindow>>,
-) -> Result<(), BevyError> {
-    let mut window = primary_window.single_mut()?;
-    window.mode = WindowMode::Fullscreen(MonitorSelection::Index(0), VideoModeSelection::Current);
-
-    Ok(())
-}
-
 fn setup(
     mut commands: Commands,
     asset_server: Res<AssetServer>,
@@ -145,7 +136,7 @@ pub struct GameFlowPlugin;
 
 impl Plugin for GameFlowPlugin {
     fn build(&self, app: &mut App) {
-        app.add_systems(Startup, (setup_camera, setup, set_fullscreen))
+        app.add_systems(Startup, (setup_camera, setup))
             .add_systems(Update, fit_canvas)
             .add_systems(Update, player::player_system)
             .add_systems(Update, player::jump)

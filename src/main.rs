@@ -3,11 +3,7 @@ mod game_flow;
 mod player;
 mod tiles;
 
-use bevy::{
-    diagnostic::FrameTimeDiagnosticsPlugin,
-    prelude::*,
-    window::{WindowMode, WindowResolution},
-};
+use bevy::{diagnostic::FrameTimeDiagnosticsPlugin, prelude::*, window::WindowResolution};
 use bevy_ecs_ldtk::prelude::*;
 use bevy_inspector_egui::{bevy_egui::EguiPlugin, quick::WorldInspectorPlugin};
 use bevy_rapier2d::prelude::*;
